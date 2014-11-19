@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Titulo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    
+  <link rel="stylesheet" href="css/themes/workingapp.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+  <link href='http://fonts.googleapis.com/css?family=Signika:700,400' rel='stylesheet' type='text/css'>  
+    <style>
+	.ui-icon-working:after {
+		background-image: url(Working.png);
+		background-size: 18px 18px;
+	}
+	.cajas {
+	}
+	.cajaGrande {
+		width: 92%;
+		float:	left;
+	}
+	.cajaPeque {
+		width: 5%;
+		float: left;
+	}
+	
+	  </style>
+</head>
+
+<body>
+
+<!-- Inicio de página -->
+<div data-role="page" id="index">
+	<div data-role="header">
+    	<h1>Inicio</h1>
+    </div>
+	<div role="main" class="ui-content">
+    
+    
+    	<div class="cajas">
+            <div class="cajaGrande">
+                <a href="#tareas" class="ui-btn ui-btn-icon-left ui-icon-working" id="btn-multimedia">Diseño Multimedia</a>
+            </div>
+            <div class="cajaPeque">
+                <a href="#" class="ui-btn ui-btn-icon-left ui-icon-clock">&nbsp;</a></div>
+            </div>
+        </div>
+        
+        
+        
+        <a href="#diseno_web" class="ui-btn" id="btn-diseno_web">Diseño Web</a>
+        <a href="#modelado_3d" class="ui-btn">	Modelado 3D</a>
+        <a href="#infografia" class="ui-btn">	Infografía</a>
+        <div data-role="popup" id="pop-multimedia" data-theme="a" data-overlay-theme="a">
+                <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                    <li data-role="list-divider">Diseño Multimedia</li>
+                    <li><a href="#">Eliminar</a></li>
+                    <li><a href="#">Editar</a></li>
+                </ul>
+        </div>
+        <div data-role="popup" id="pop-diseno_web" data-theme="a" data-overlay-theme="a">
+                <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                    <li data-role="list-divider">Diseño Web</li>
+                    <li><a href="#">Eliminar</a></li>
+                    <li><a href="#">Editar</a></li>
+                </ul>
+        </div>
+    </div>
+	</div>
+<!-- Final de página -->
+
+<!-- Inicio de página -->
+<div data-role="page" id="clases">
+	<div data-role="header">
+    	<h1>Clases</h1>
+    </div>
+	<div role="main" class="ui-content">
+        Contenido
+    </div>
+	<div data-role="footer">
+    	<h1>Footer</h1>
+    </div>
+</div>
+<!-- Final de página -->
+
+<!-- Inicio de página -->
+<div data-role="page" id="tareas">
+	
+	<div data-role="header">
+    	<h1>Tareas</h1>
+    </div>
+	<div role="main" class="ui-content">
+        <a href="#flatdesign" class="ui-btn">	Flat Design</a>
+    	<a href="#diseno_web" class="ui-btn">	Logos</a>
+    	<a href="#modelado_3d" class="ui-btn">	Modelos App</a>
+    	<a href="#infografia" class="ui-btn">	Teclado Virtual</a>
+    </div>
+</div>
+<!-- Final de página -->
+
+<!-- Inicio de página -->
+<div data-role="page" id="flatdesign">
+	<div data-role="header"> 
+    	<h1>Agregar tarea</h1>
+
+    </div>
+	<div role="main" class="ui-content">
+    
+           
+    <form>
+     <label for="text-1">Nombre de la tarea</label>
+     <input type="text" name="text-1" id="text-1" value="">
+     <label for="text-3">Descripción de la tarea</label>
+     <input type="text" data-clear-btn="true" name="text-3" id="text-3" value="">
+</form>    
+        <form>
+     <label for="date-1"> <font size=3>Fecha de entrega</font> </label>
+     <input type="date" data-clear-btn="false" name="date-1" id="date-1" value="">
+     <label for="date-2"> <font size=3>Fecha de aviso</font> </label>
+     <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
+</form>
+    
+    </div>
+</div>
+<!-- Final de página -->
+
+<!-- Inicio de página -->
+<div data-role="page" id="estadisticas">
+	<div data-role="header">
+    	<h1>Estadísticas</h1>
+    </div>
+	<div role="main" class="ui-content">
+        Contenido
+    </div>
+	<div data-role="footer">
+    	<h1>Footer</h1>
+    </div>
+</div>
+<!-- Final de página -->
+
+
+
+
+
+<script>
+$(function(){
+	$("#btn-multimedia").bind("taphold", function() {
+		$("#pop-multimedia").popup("open");
+	});
+	$("#btn-diseno_web").bind("taphold", function() {
+		$("#pop-diseno_web").popup("open");
+	});
+});
+</script>
+</body>
+</html>
